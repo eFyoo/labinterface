@@ -34,7 +34,8 @@ DISC = {
 @bot.message_handler(content_types="web_app_data") #получаем отправленные данные 
 def answer(webAppMes):
    print(webAppMes.web_app_data.data) #конкретно то что мы передали в бота
-   bot.send_message(webAppMes.chat.id, f"Кнопка отреагировала на клик: {webAppMes.web_app_data.data}")
+   bot.send_message(webAppMes.chat.id, f"Кнопка отреагировала на клик: 
+                    {webAppMes.web_app_data.data}")
 
 @bot.message_handler(content_types = ['text'])
 def callback_worker(message):
