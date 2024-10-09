@@ -20,7 +20,7 @@ btn1.addEventListener("click", function () {
  }
  else {
      tg.MainButton.setText("Вывести информацию по собаке Мопс");
-     item = ;
+     item = mops;
      tg.MainButton.show();
  }
 });
