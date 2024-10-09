@@ -30,7 +30,7 @@ def answer(webAppMes):
    print(webAppMes.web_app_data.data) #конкретно то что мы передали в бота
    bot.send_message(webAppMes.chat.id, "Кнопка отреагировала на клик:")
    bot.send_message(webAppMes.chat.id, data)
-   bot.send_sticker(webAppMes.chat.id, sticker = "AAMCAQADGQEAAS5O12cHBQTU3M9spwRun9l2fWaGpDwXAAL4AQACOA6CEVv05nratTJkAQAHbQADNgQ")
+   bot.send_sticker(webAppMes.chat.id, sticker = "CAACAgEAAxkBAAEuTtdnBwUE1NzPbKcEbp_Zdn1mhqQ8FwAC-AEAAjgOghFb9OZ62rUyZDYE")
    
 
 @bot.message_handler(content_types = ['text'])
