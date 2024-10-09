@@ -65,6 +65,6 @@ btn2.addEventListener("click", function () {
 
 
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
- tg.sendData(JSON.stringify(item, about));
+ tg.sendData(JSON.stringify(item));
 });
 
