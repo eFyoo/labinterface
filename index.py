@@ -1,6 +1,7 @@
 import sqlite3
 import telebot
 from telebot import types
+import json
 
 conn=sqlite3.connect("C:/SQLtelegram/telegram.db", check_same_thread=False)
 cur = conn.cursor()
@@ -33,9 +34,11 @@ DISC = {
 
 @bot.message_handler(content_types="web_app_data") #получаем отправленные данные 
 def answer(webAppMes):
+   data = json.loads(webAppMes.web_app_data.data)
    print(webAppMes.web_app_data.data) #конкретно то что мы передали в бота
    bot.send_message(webAppMes.chat.id, "Кнопка отреагировала на клик:")
-   bot.send_message(webAppMes.chat.id, {webAppMes.web_app_data.data})
+   bot.send_message(webAppMes.chat.id, data)
+   
 
 @bot.message_handler(content_types = ['text'])
 def callback_worker(message):
