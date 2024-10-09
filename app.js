@@ -58,13 +58,12 @@ btn2.addEventListener("click", function () {
       tg.MainButton.setText("Вывести информацию о Аффенпинчере");
       item = "4";
       about = "Аффенпинчер похож на терьера и выглядит как озорная обезьянка. Порода относится к комнатным собачкам. Рост взрослой собаки — 24–28 см в холке (от кончиков лап до лопаток), вес — от 3 до 4 кг. Жесткая шерсть, как правило, черного окраса, иногда с добавлением серых оттенков.";
-      image = ""
       tg.MainButton.show();
   }
  });
 
 
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
- tg.sendData(JSON.stringify(item, about));
+ tg.sendData(JSON.stringify(about));
 });
 
